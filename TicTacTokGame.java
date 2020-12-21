@@ -15,14 +15,14 @@ public class TicTacTokGame {
 		}
 		return board;
 	}
-	
+  
 	public char userInput(char select) {
 		if(select == 'X')
 			return 'X';
 		else
 			return '0';
-	}
-
+}
+  
 	public static void main(String[] args) {
 
 		TicTacTokGame tictactoe = new TicTacTokGame();
