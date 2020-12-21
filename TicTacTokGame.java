@@ -46,6 +46,18 @@ public class TicTacTokGame {
 			System.out.println("Erong");
 		return index;
 	}
+	
+	public void makeMove(char[] board, char useSelect, int userMove) {
+		
+		boolean spaceFree = isSpace(board, userMove);
+		if (spaceFree) board[userMove] = useSelect;
+		System.out.println(board[userMove] = useSelect);
+	}
+	
+	private static boolean isSpace(char[] board, int userMove) {
+		return board[userMove]==' ';	
+	}
+
 
 }
 	public static void main(String[] args) {
@@ -63,6 +75,7 @@ public class TicTacTokGame {
 		tictactoe.initializeBoard(board);
 		int userMove = tictactoe.getUserMove(board);
 		System.out.println(userMove);
+		tictactoe.makeMove(board, useSelect, userMove);
 		tictactoe.initializeBoard(board);
 	}
 }
