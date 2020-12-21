@@ -15,7 +15,6 @@ public class TicTacTokGame {
 		}
 		return board;
 	}
-	
 	public char userInput(char select) {
 		if(select == 'X')
 			return 'X';
@@ -32,7 +31,7 @@ public class TicTacTokGame {
 		System.out.println("|-----------|");
 
 	}
-	
+
 	public int getUserMove(char[] board) {
 		int[] playeMove = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 		Scanner inputuser = new Scanner(System.in);
@@ -60,6 +59,7 @@ public class TicTacTokGame {
 	}
 
 
+}
 	public static void main(String[] args) {
 
 		TicTacTokGame tictactoe = new TicTacTokGame();
@@ -71,11 +71,11 @@ public class TicTacTokGame {
 			useSelect = tictactoe.userInput(useSelect);
 		else
 			System.out.println("Wrong Input, Please Try Again");
-		System.out.println(useSelect);
-		
+		System.out.println(useSelect);		
 		tictactoe.initializeBoard(board);
 		int userMove = tictactoe.getUserMove(board);
 		System.out.println(userMove);
 		tictactoe.makeMove(board, useSelect, userMove);
+		tictactoe.initializeBoard(board);
 	}
 }
