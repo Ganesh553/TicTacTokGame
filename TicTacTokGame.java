@@ -63,6 +63,5 @@ public class TicTacTokGame {
 		tictactoe.initializeBoard(board);
 		int userMove = tictactoe.getUserMove(board);
 		System.out.println(userMove);
-		tictactoe.initializeBoard(board);
 	}
 }
