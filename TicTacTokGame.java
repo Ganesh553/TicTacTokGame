@@ -3,7 +3,12 @@ package TicTacToe;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import TicTacToe.TicTacTokGame.Player;
+
 public class TicTacTokGame {
+	public static final int HEAD =0;
+	public static final int TAIL =1;
+	public static enum Player{USER, COMPUTER};
 
 	public char[] assignmentBoard() {
 
@@ -58,6 +63,11 @@ public class TicTacTokGame {
 	private static boolean isSpace(char[] board, int userMove) {
 		return board[userMove]==' ';	
 	}
+	
+	public Player getWhoStart() {
+		int toss = (int)(Math.random() * 10) %2;
+		return (toss == HEAD) ? Player.USER : Player.COMPUTER;
+	}
 
 
 	public static void main(String[] args) {
@@ -77,5 +87,6 @@ public class TicTacTokGame {
 		int userMove = tictactoe.getUserMove(board);
 		System.out.println(userMove);
 		tictactoe.makeMove(board, useSelect, userMove);
+		System.out.println(tictactoe.getWhoStart());
 	}
 }
