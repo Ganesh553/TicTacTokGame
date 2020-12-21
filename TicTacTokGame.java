@@ -15,7 +15,7 @@ public class TicTacTokGame {
 		}
 		return board;
 	}
-	
+
 	public char userInput(char select) {
 		if(select == 'X')
 			return 'X';
@@ -32,8 +32,8 @@ public class TicTacTokGame {
 		System.out.println("|-----------|");
 
 	}
-
-
+}
+  
 	public static void main(String[] args) {
 
 		TicTacTokGame tictactoe = new TicTacTokGame();
@@ -46,7 +46,6 @@ public class TicTacTokGame {
 		else
 			System.out.println("Wrong Input, Please Try Again");
 		System.out.println(useSelect);
-		
 		tictactoe.initializeBoard(board);
 	}
 }
