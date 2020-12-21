@@ -15,10 +15,25 @@ public class TicTacTokGame {
 		}
 		return board;
 	}
-
+  
+	public char userInput(char select) {
+		if(select == 'X')
+			return 'X';
+		else
+			return '0';
+}
+  
 	public static void main(String[] args) {
 
 		TicTacTokGame tictactoe = new TicTacTokGame();
 		char[] board = tictactoe.assignmentBoard();
+		Scanner inputuser = new Scanner(System.in);
+		System.out.println("Enter X OR 0 to play");
+		char useSelect = inputuser.next().charAt(0);
+		if (useSelect == '0' || useSelect == 'X') 
+			useSelect = tictactoe.userInput(useSelect);
+		else
+			System.out.println("Wrong Input, Please Try Again");
+		System.out.println(useSelect);
 	}
 }
